@@ -36,5 +36,11 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::post('resetPassword', [PasswordController::class, 'resetPassword']);
     
     Route::post('addingBook', [BookController::class, 'addingBook']);
-    
+    Route::post('updateBookById', [BookController::class, 'updateBookById']);
+    Route::post('deleteBookById', [BookController::class, 'deleteBookById']);
+    Route::post('addQuantityToExistingBook', [BookController::class, 'addQuantityToExistingBook']);
+    Route::get('displayAllBooks', [BookController::class, 'displayAllBooks']);
+    Route::get('sortPriceLowToHigh', [BookController::class, 'sortPriceLowToHigh']);
+    Route::get('sortPriceHighToLow', [BookController::class, 'sortPriceHighToLow']);
+    Route::post('searchBookByKeyword', [BookController::class, 'searchBookByKeyword']);
 });

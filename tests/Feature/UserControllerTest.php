@@ -27,13 +27,13 @@ class UserControllerTest extends TestCase
         $response = $this->withHeaders([
             'Content-Type' => 'Application/json',
         ])->json('POST', '/api/register', [
-            "role" => "user",
-            "first_name" => "praveen",
+            "role" => "admin",
+            "first_name" => "prem",
             "last_name" => "Kumar",
-            "email" => "praveen@gmail.com",
+            "email" => "mabbupremkumar12@gmail.com",
             "phone_no" => "7730002849",
-            "password" => "12345",
-            "confirm_password" => "12345"
+            "password" => "Prem335@",
+            "confirm_password" => "Prem335@"
         ]);
         $response->assertStatus(201);
     }
@@ -43,10 +43,10 @@ class UserControllerTest extends TestCase
         $response = $this->withHeaders([
             'Content-Type' => 'Application/json',
         ])->json('POST', '/api/register', [
-            "role" => "user",
-            "first_name" => "praveen",
+            "role" => "admin",
+            "first_name" => "prem",
             "last_name" => "Kumar",
-            "email" => "praveenkumar@gmail.com",
+            "email" => "mabbupremkumar12@gmail.com",
             "phone_no" => "7730002849",
             "password" => "12345",
             "confirm_password" => "12345"
@@ -67,8 +67,8 @@ class UserControllerTest extends TestCase
             'POST',
             '/api/login',
             [
-                "email" => "praveen@gmail.com",
-                "password" => "12345"
+                "email" => "mabbupremkumar12@gmail.com",
+                "password" => "Prem335@"
             ]
         );
         $response->assertStatus(200);
