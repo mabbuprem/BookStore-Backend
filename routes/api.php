@@ -54,4 +54,9 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::post('addBookToWishlistByBookId', [WishlistController::class, 'addBookToWishlistByBookId']);
     Route::post('deleteBookByWishlistId', [WishlistController::class, 'deleteBookByWishlistId']);
     Route::get('getAllBooksInWishlist', [WishlistController::class, 'getAllBooksInWishlist']);
+
+    Route::post('addAddress', [AddressController::class, 'addAddress']);
+    Route::post('updateAddress', [AddressController::class, 'updateAddress']);
+    Route::post('deleteAddress', [AddressController::class, 'deleteAddress']);
+    Route::post('getAddress', [AddressController::class, 'getAddress']);
 });
