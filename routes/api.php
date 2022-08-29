@@ -59,4 +59,7 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::post('updateAddress', [AddressController::class, 'updateAddress']);
     Route::post('deleteAddress', [AddressController::class, 'deleteAddress']);
     Route::post('getAddress', [AddressController::class, 'getAddress']);
+
+    Route::post('placeOrders', [OrdersController::class, 'placeOrders']);
+    Route::post('cancelOrders', [OrdersController::class, 'cancelOrders']);
 });

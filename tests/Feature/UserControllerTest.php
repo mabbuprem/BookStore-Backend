@@ -30,7 +30,7 @@ class UserControllerTest extends TestCase
             "role" => "admin",
             "first_name" => "prem",
             "last_name" => "Kumar",
-            "email" => "mabbupremkumar12@gmail.com",
+            "email" => "mabbupremkumar1234@gmail.com",
             "phone_no" => "7730002849",
             "password" => "Prem335@",
             "confirm_password" => "Prem335@"
@@ -67,7 +67,7 @@ class UserControllerTest extends TestCase
             'POST',
             '/api/login',
             [
-                "email" => "mabbupremkumar12@gmail.com",
+                "email" => "mabbupremkumar1234@gmail.com",
                 "password" => "Prem335@"
             ]
         );
@@ -94,7 +94,7 @@ class UserControllerTest extends TestCase
     {
         $response = $this->withHeaders([
             'Content-Type' => 'Application/json',
-            'Authorization' => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjUwMDMwODk3LCJleHAiOjE2NTAwMzQ0OTcsIm5iZiI6MTY1MDAzMDg5NywianRpIjoidUd4bm93Q3FyQTFCU0FyTSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ZGwsV7npZXWXbX-IBxDGJN0mphS8R42Gp0v4XRKs3sc'
+            'Authorization' => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjYxNjU3Nzk5LCJleHAiOjE2NjE2NjEzOTksIm5iZiI6MTY2MTY1Nzc5OSwianRpIjoiSTB6NUFsR1pNS1V5ejFDcyIsInN1YiI6IjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SFMkbHXkmvA9BKDPwPHMfW1pr2gHZz3bKLnQ71QyEcw'
         ])->json('POST', '/api/logout');
         $response->assertStatus(201);
     }
